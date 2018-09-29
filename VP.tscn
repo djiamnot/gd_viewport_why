@@ -81,6 +81,7 @@ viewport_path = NodePath("Viewport")
 
 [sub_resource type="SpatialMaterial" id=9]
 
+resource_local_to_scene = true
 render_priority = 0
 flags_transparent = true
 flags_unshaded = false
@@ -134,7 +135,7 @@ uv2_triplanar = false
 uv2_triplanar_sharpness = 1.0
 proximity_fade_enable = false
 distance_fade_mode = 0
-_sections_unfolded = [ "Albedo", "Flags", "Parameters", "UV1" ]
+_sections_unfolded = [ "Albedo", "Flags", "Parameters", "Resource", "UV1" ]
 
 [node name="VP" type="Spatial"]
 script = ExtResource( 1 )
@@ -154,7 +155,7 @@ lod_max_hysteresis = 0.0
 mesh = SubResource( 7 )
 skeleton = NodePath("..")
 material/0 = SubResource( 9 )
-_sections_unfolded = [ "Geometry", "Transform", "material" ]
+_sections_unfolded = [ "Geometry", "Transform", "material", "mesh" ]
 
 [node name="Viewport" type="Viewport" parent="."]
 arvr = false
