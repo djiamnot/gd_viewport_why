@@ -11,9 +11,11 @@ func _ready():
 	var viewport = get_node("Viewport")
 	viewport.set_clear_mode(Viewport.CLEAR_MODE_ONLY_NEXT_FRAME)
 
+
 	# Let two frames pass to make sure the vieport's is captured
 	yield(get_tree(), "idle_frame")
 	yield(get_tree(), "idle_frame")
+	mesh.material_override = mesh.material_override.duplicate()
 	mesh.material_override.set_texture(0, viewport.get_texture())
 
 	# Note here, that thisroot id is not the same in the rendered viewport texture
